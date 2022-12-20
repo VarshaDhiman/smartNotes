@@ -1,0 +1,11 @@
+{% extends "base.html "%}
+
+{%  block content %}
+<form method='POST'>
+    {% csrf_token %}
+    <p>Are you sure want to delete "{{notes.title}}"?</p>
+    <p>This action can't be undo </p>
+    <input type="submit" class="btn btn-danger" value="confirm">
+
+</form>
+{% endblock %}
